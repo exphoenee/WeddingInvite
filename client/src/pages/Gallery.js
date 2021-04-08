@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import MainCarousel from "../components/MainCarousel";
 
@@ -8,7 +11,14 @@ import "../styles/app.scss";
 function App() {
   return (
     <div className="Gallery">
-      <MainCarousel />
+      <Container>
+        <Row>
+          <Col></Col>
+          <Col>
+            <MainCarousel />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

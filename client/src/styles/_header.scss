@@ -13,11 +13,8 @@
   text-shadow: 1px 1px 1px rgba(50, 20, 5, 1), -1px -1px 1px rgba(50, 20, 5, 1),
     1px 3px 3px rgba(50, 20, 5, 0.8), 2px 4px 15px rgba(0, 0, 0, 0.6),
     -1px -3px 3px rgba(50, 20, 5, 0.8);
-  transform-style: preserve-3d;
-  perspective: 1000px;
 
   .title-text {
-    transform: translateZ(300px);
   }
 
   h1 {
@@ -28,5 +25,22 @@
   h2,
   h3 {
     text-align: center;
+  }
+
+  #details-btn {
+    background-color: #ffddddaa;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px;
+    width: 120px;
+    margin: 20px auto;
+
+    &:hover {
+      background-color: #ffddddff;
+      color: black;
+    }
   }
 }

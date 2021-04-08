@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -11,16 +12,15 @@ const MainMenu = (setRouter) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link
-            onClick={() => {
-              setRouter("home");
-            }}
-            href="#features"
-          >
+          <Link className="nav-link" to="/">
             Home
-          </Nav.Link>
-          <Nav.Link href="#details">Információk</Nav.Link>
-          <Nav.Link href="#gallery">Galéria</Nav.Link>
+          </Link>
+          <Link className="nav-link" to="/gallery">
+            Gallery
+          </Link>
+          <Link className="nav-link" to="/details">
+            Információk
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
