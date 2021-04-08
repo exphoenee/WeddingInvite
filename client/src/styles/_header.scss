@@ -1,0 +1,32 @@
+.header {
+  height: 100vh;
+  background: url("../media/backgrounds/img02.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(50, 20, 5, 1), -1px -1px 1px rgba(50, 20, 5, 1),
+    1px 3px 3px rgba(50, 20, 5, 0.8), 2px 4px 15px rgba(0, 0, 0, 0.6),
+    -1px -3px 3px rgba(50, 20, 5, 0.8);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+  .title-text {
+    transform: translateZ(300px);
+  }
+
+  h1 {
+    font-family: "Ballet", cursive;
+    font-size: 6rem;
+    text-align: center;
+  }
+  h2,
+  h3 {
+    text-align: center;
+  }
+}
