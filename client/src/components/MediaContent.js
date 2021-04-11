@@ -6,7 +6,7 @@ import hands from "../media/video/hands.mp4";
 import marriage from "../media/video/marriage.mp4";
 import wedding from "../media/video/wedding.mp4";
 
-const VideoContent = () => {
+const MediaContent = () => {
   const videoRef = useRef(null);
 
   const videos = [groom, hands, marriage, wedding];
@@ -34,4 +34,4 @@ const VideoContent = () => {
   );
 };
 
-export default VideoContent;
+export default MediaContent;

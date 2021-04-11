@@ -8,18 +8,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const MainMenu = (setRouter) => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Link className="nav-link" to="/">
             Home
           </Link>
-          <Link className="nav-link" to="/gallery">
-            Gallery
+          <Link className="nav-link" to="/about">
+            Rólunk
           </Link>
-          <Link className="nav-link" to="/details">
+          <Link className="nav-link" to="/informations">
             Információk
+          </Link>
+          <Link className="nav-link" to="/seatingplan">
+            Ültetési rend
           </Link>
         </Nav>
       </Navbar.Collapse>

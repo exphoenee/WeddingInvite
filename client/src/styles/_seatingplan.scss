@@ -1,0 +1,21 @@
+.seating-plan {
+  .row {
+    justify-content: center;
+    align-items: center;
+    .image-frame {
+      overflow: hidden;
+      -o-object-fit: contain;
+      object-fit: contain;
+      border-radius: 2rem;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 1px 2px 5px black;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        box-shadow: 3px 5px 10px black;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

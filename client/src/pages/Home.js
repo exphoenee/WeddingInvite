@@ -8,7 +8,7 @@ import Header from "../components/Header";
 //import styles
 import "../styles/app.scss";
 
-function App() {
+function Home() {
   return (
     <motion.div
       variants={pageAnimation}
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

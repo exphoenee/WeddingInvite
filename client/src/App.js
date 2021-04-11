@@ -3,8 +3,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "./pages/Home";
-import Details from "./pages/Details";
-import Gallery from "./pages/Gallery";
+import SeatingPlan from "./pages/SeatingPlan";
+import Informations from "./pages/Informations";
+import About from "./pages/About";
 import MainMenu from "./components/MainMenu";
 
 //import styles
@@ -18,7 +19,9 @@ function App() {
         <AnimatePresence exitBeforeEnter>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/gallery" exact component={Gallery} />
+            <Route path="/about" exact component={About} />
+            <Route path="/info" exact component={Informations} />
+            <Route path="/seatingplan" exact component={SeatingPlan} />
           </Switch>
         </AnimatePresence>
       </div>

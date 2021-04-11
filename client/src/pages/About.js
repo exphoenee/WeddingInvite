@@ -6,29 +6,33 @@ import { motion } from "framer-motion";
 
 import { pageAnimation } from "../animations/animation";
 import MainCarousel from "../components/MainCarousel";
+import MediaContent from "../components/MediaContent";
 
 //import styles
 import "../styles/app.scss";
 
-function App() {
+function About() {
   return (
     <motion.div
-      className="Gallery"
+      className="About"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
     >
       <Container>
-        <Row>
-          <Col></Col>
-          <Col>
+        <Row className="mt-5">
+          <Col lg={5} md={12}>
+            <h2>Rólunk</h2>
+          </Col>
+          <Col lg={7} md={12}>
             <MainCarousel />
           </Col>
         </Row>
       </Container>
+      <MediaContent />
     </motion.div>
   );
 }
 
-export default App;
+export default About;
