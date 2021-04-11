@@ -24,6 +24,9 @@ const MainMenu = (setRouter) => {
           <Link className="nav-link" to="/seatingplan">
             Ültetési rend
           </Link>
+          <Link className="nav-link" to="/presents">
+            Ajándékozás
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

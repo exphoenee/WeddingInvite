@@ -1,10 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-//import styles
-import "../styles/app.scss";
+import { pageAnimation } from "../animations/animation";
 
 function Informations() {
-  return <div className="informations"></div>;
+  return (
+    <motion.div
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      className="informations"
+    ></motion.div>
+  );
 }
 
 export default Informations;

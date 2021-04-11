@@ -5,8 +5,6 @@ import Col from "react-bootstrap/Col";
 import { motion } from "framer-motion";
 
 import { pageAnimation } from "../animations/animation";
-//import styles
-import "../styles/app.scss";
 
 import comp01 from "../media/computers/comp01.jpg";
 import comp02 from "../media/computers/comp02.jpg";
@@ -35,7 +33,7 @@ function seatingplan() {
   ];
 
   return (
-    <div
+    <motion.div
       variants={pageAnimation}
       initial="hidden"
       animate="show"
@@ -45,7 +43,7 @@ function seatingplan() {
       <Container className="mt-5">
         <CompRow comps={comps} />
       </Container>
-    </div>
+    </motion.div>
   );
 }
 
