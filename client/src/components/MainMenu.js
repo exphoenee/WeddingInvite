@@ -16,7 +16,7 @@ const MainMenu = (setRouter) => {
             Home
           </Link>
           <Link className="nav-link" to="/about">
-            Rólunk
+            Történetünk
           </Link>
           <Link className="nav-link" to="/informations">
             Információk

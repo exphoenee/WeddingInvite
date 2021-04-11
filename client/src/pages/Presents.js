@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { pageAnimation } from "../animations/animation";
@@ -26,11 +26,14 @@ function Presents() {
       newX = window.innerWidth - 100;
     }
 
-    //flyingButton.current.style.left = newX + "px";
-    //flyingButton.current.style.top = newY + "px";
+    flyingButton.current.style.left = newX + "px";
+    flyingButton.current.style.top = newY + "px";
   };
 
+  useEffect(() => {}, [showModal]);
+
   const hanldeClick = () => {
+    console.log("Click");
     setShowModal(true);
     setTimeout(() => {
       setShowModal(false);
@@ -38,13 +41,11 @@ function Presents() {
   };
 
   return (
-    <motion.div
-      variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      className="presents"
-    >
+    <motion.div id="presents">
+      <div>
+        <h2>Ha szeretnél ajándékozni, itt megteheted...</h2>
+        <p>he elég ügyes vagy kitartó vagy!</p>
+      </div>
       {showModal ? (
         <div id="messageModal">
           <h2>
@@ -55,6 +56,10 @@ function Presents() {
         ""
       )}
       <div
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
         ref={flyingButton}
         onMouseEnter={handleMouseEnter}
         onClick={hanldeClick}

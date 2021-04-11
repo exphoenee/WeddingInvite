@@ -17,10 +17,11 @@ function About() {
       animate="show"
       exit="exit"
     >
+      <div style={{ height: "100px" }}></div>
       <Container className="mt-5">
         <Row>
           <Col lg={5} md={12}>
-            <h2>Rólunk</h2>
+            <h2>Történetünk</h2>
           </Col>
           <Col lg={7} md={12}>
             <MainCarousel />

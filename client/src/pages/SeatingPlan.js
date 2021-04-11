@@ -4,7 +4,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { motion } from "framer-motion";
 
-import { pageAnimation } from "../animations/animation";
+import { useScroll } from "../components/useScroll";
+import {
+  pageAnimation,
+  scrollReveal,
+  photoAnim,
+} from "../animations/animation";
 
 import comp01 from "../media/computers/comp01.jpg";
 import comp02 from "../media/computers/comp02.jpg";
@@ -21,7 +26,7 @@ import comp12 from "../media/computers/comp12.jpg";
 import comp13 from "../media/computers/comp13.jpg";
 import comp14 from "../media/computers/comp14.jpg";
 
-function seatingplan() {
+function SeatingPlan() {
   const comps = [
     [comp01, comp02],
     [comp03, comp04],
@@ -40,7 +45,17 @@ function seatingplan() {
       exit="exit"
       className="seating-plan"
     >
+      <div style={{ height: "100px" }}></div>
       <Container className="mt-5">
+        <h2>Ültetési rend:</h2>
+        <p>
+          A különleges helyzetre való tekintettel, speciális ültetési rendet
+          dolgoztunk ki nektek, hogy mindenki biztosnágban lehessen!
+        </p>
+        <p>
+          Foglaljatok helyet a számítőgépeitek, tabletjeitek vagy telefonjaitok
+          előtt!
+        </p>
         <CompRow comps={comps} />
       </Container>
     </motion.div>
@@ -60,18 +75,25 @@ const CompRow = ({ comps }) => {
 };
 
 const CompCol = ({ row, rowIndex }) => {
-  console.log(row);
+  const [element, controls] = useScroll();
+
   return (
     <>
       {row.map((col, colIndex) => (
         <Col key={colIndex}>
-          <div className="image-frame mt-5 mb-5">
-            <img src={col} alt={`comp-${colIndex}-${rowIndex}`} />
-          </div>
+          <motion.div
+            variants={scrollReveal}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+            className="image-frame mt-5 mb-5"
+          >
+            <motion.img src={col} alt={`comp-${colIndex}-${rowIndex}`} />
+          </motion.div>
         </Col>
       ))}
     </>
   );
 };
 
-export default seatingplan;
+export default SeatingPlan;
