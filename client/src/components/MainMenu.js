@@ -13,7 +13,7 @@ const MainMenu = (setRouter) => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Link className="nav-link" to="/">
-            Home
+            Meghívó
           </Link>
           <Link className="nav-link" to="/about">
             Történetünk

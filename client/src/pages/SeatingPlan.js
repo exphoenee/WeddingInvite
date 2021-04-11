@@ -5,11 +5,7 @@ import Col from "react-bootstrap/Col";
 import { motion } from "framer-motion";
 
 import { useScroll } from "../components/useScroll";
-import {
-  pageAnimation,
-  scrollReveal,
-  photoAnim,
-} from "../animations/animation";
+import { pageAnimation, scrollReveal } from "../animations/animation";
 
 import comp01 from "../media/computers/comp01.jpg";
 import comp02 from "../media/computers/comp02.jpg";
@@ -25,6 +21,8 @@ import comp11 from "../media/computers/comp11.jpg";
 import comp12 from "../media/computers/comp12.jpg";
 import comp13 from "../media/computers/comp13.jpg";
 import comp14 from "../media/computers/comp14.jpg";
+
+import bg from "../media/backgrounds/old-1.jpg";
 
 function SeatingPlan() {
   const comps = [
@@ -45,6 +43,7 @@ function SeatingPlan() {
       exit="exit"
       className="seating-plan"
     >
+      <img id="bg" src={bg} alt="bg" />
       <div style={{ height: "100px" }}></div>
       <Container className="mt-5">
         <h2>Ültetési rend:</h2>

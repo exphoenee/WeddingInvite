@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import { pageAnimation } from "../animations/animation";
 
+import bg from "../media/backgrounds/paper.jpg";
+
 function Informations() {
   return (
     <motion.div
@@ -11,7 +13,10 @@ function Informations() {
       animate="show"
       exit="exit"
       className="informations"
-    ></motion.div>
+    >
+      <h2>Fontos tudni</h2>
+      <img id="bg" src={bg} alt="bg" />
+    </motion.div>
   );
 }
 
