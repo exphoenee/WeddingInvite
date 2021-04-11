@@ -2,7 +2,9 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { motion } from "framer-motion";
 
+import { pageAnimation } from "../animations/animation";
 import MainCarousel from "../components/MainCarousel";
 
 //import styles
@@ -10,7 +12,13 @@ import "../styles/app.scss";
 
 function App() {
   return (
-    <div className="Gallery">
+    <motion.div
+      className="Gallery"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <Container>
         <Row>
           <Col></Col>
@@ -19,7 +27,7 @@ function App() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </motion.div>
   );
 }
 

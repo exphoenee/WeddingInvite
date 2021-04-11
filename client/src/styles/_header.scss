@@ -15,8 +15,72 @@
     -1px -3px 3px rgba(50, 20, 5, 0.8);
 
   .title-text {
+    background: linear-gradient(45deg, #edc0bf33 50%, #c4caef33 58%);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(122, 122, 122, 0.3);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 20px 20px 10px rgba(black, 0.3);
+    position: relative;
+    overflow: hidden;
   }
 
+  .title-text::after {
+    content: "";
+    top: -110%;
+    left: 120%;
+    transform: rotate(-45deg);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    position: absolute;
+    width: 13rem;
+    height: 100vw;
+    transition: all 0.5 ease-in-out;
+  }
+
+  .title-text:hover::after {
+    -webkit-animation: buttonSlide 1.7s 1;
+    animation: buttonSlide 1.7s 1;
+  }
+
+  @-webkit-keyframes buttonSlide {
+    0% {
+      top: -110%;
+      left: 120%;
+    }
+
+    50% {
+      top: 10%;
+      left: -30%;
+    }
+
+    100% {
+      top: -10%;
+      left: -10%;
+    }
+  }
+
+  @keyframes buttonSlide {
+    0% {
+      top: -110%;
+      left: 90%;
+    }
+
+    50% {
+      top: 10%;
+      left: -30%;
+    }
+
+    100% {
+      top: -10%;
+      left: -10%;
+    }
+  }
   h1 {
     font-family: "Ballet", cursive;
     font-size: 6rem;

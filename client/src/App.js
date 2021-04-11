@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import Home from "./pages/Home";
 import Details from "./pages/Details";
@@ -14,10 +15,12 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <MainMenu />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/gallery" exact component={Gallery} />
-        </Switch>
+        <AnimatePresence exitBeforeEnter>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/gallery" exact component={Gallery} />
+          </Switch>
+        </AnimatePresence>
       </div>
     </BrowserRouter>
   );
