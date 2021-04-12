@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import WeddingDate from "./WeddingDate";
+
 const Countdown = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -12,7 +14,7 @@ const Countdown = () => {
   const timerComponents = [];
 
   const calculateTimeLeft = () => {
-    let difference = +new Date(`04/24/2021 16:00:00`) - +new Date();
+    let difference = WeddingDate - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {

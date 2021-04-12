@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import SeatingPlan from "./pages/SeatingPlan";
 import Informations from "./pages/Informations";
+import Live from "./pages/Live";
 import Presents from "./pages/Presents";
 
 //import styles
@@ -20,10 +21,11 @@ function App() {
         <AnimatePresence exitBeforeEnter>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route path="/informations" exact component={Informations} />
-            <Route path="/seatingplan" exact component={SeatingPlan} />
-            <Route path="/presents" exact component={Presents} />
+            <Route path="/about" component={About} />
+            <Route path="/informations" component={Informations} />
+            <Route path="/seatingplan" component={SeatingPlan} />
+            <Route path="/live" component={Live} />
+            <Route path="/presents" component={Presents} />
           </Switch>
         </AnimatePresence>
       </div>
