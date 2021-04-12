@@ -18,7 +18,7 @@ const Live = () => {
   //* Itt kell átyírni a test-et false-ra és a video ID-t
   //* Majd ide feltölteni:
   //* https://app.netlify.com/sites/adriandviktor/overview
-  const test = false;
+  const test = true;
   const videoId = "DDU-rZs-Ic4";
 
   const url = "https://www.youtube.com/embed/" + videoId + "/?autoplay=1";
