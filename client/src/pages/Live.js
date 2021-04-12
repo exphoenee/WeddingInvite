@@ -15,8 +15,10 @@ https://www.youtube.com/embed/DDU-rZs-Ic4
 */
 
 const Live = () => {
-  // Itt kell átyírni a test-et falsere és a video ID-t
-  const test = true;
+  //* Itt kell átyírni a test-et false-ra és a video ID-t
+  //* Majd ide feltölteni:
+  //* https://app.netlify.com/sites/adriandviktor/overview
+  const test = false;
   const videoId = "DDU-rZs-Ic4";
 
   const url = "https://www.youtube.com/embed/" + videoId + "/?autoplay=1";
@@ -48,8 +50,7 @@ const Live = () => {
         timeLeft
           ? { height: "100vh", backgroundColor: "black" }
           : {
-              marginTop: "25%",
-              height: "100vh",
+              marginTop: "15%",
               backgroundColor: "white",
             }
       }
