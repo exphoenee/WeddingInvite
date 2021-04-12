@@ -15,14 +15,16 @@ https://www.youtube.com/embed/DDU-rZs-Ic4
 */
 
 const Live = () => {
+  // Itt kell átyírni a test-et falsere és a video ID-t
+  const test = true;
+  const videoId = "DDU-rZs-Ic4";
+
+  const url = "https://www.youtube.com/embed/" + videoId + "/?autoplay=1";
+
   const started = () => {
-    let WeddingDateTest;
+    const WeddingDateTest = +new Date(`4/12/2021 16:00:00`);
 
-    //for test remove remarks
-    //WeddingDateTest = +new Date(`4/12/2021 16:00:00`);
-
-    let CurrentTimeLeft =
-      (WeddingDateTest ? WeddingDateTest : WeddingDate) - +new Date();
+    let CurrentTimeLeft = (test ? WeddingDateTest : WeddingDate) - +new Date();
     return CurrentTimeLeft / 1000 / 60 / 60 / 24 < 1;
   };
 
@@ -59,7 +61,7 @@ const Live = () => {
         <Iframe
           width="100%"
           height="90%"
-          url="https://www.youtube.com/embed/DDU-rZs-Ic4"
+          url={url}
           id="live"
           display="initial"
           position="relative"
