@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-import { pageAnimation } from "../animations/animation";
+import { pageAnimation, fade } from "../animations/animation";
 
-import bg from "../media/backgrounds/damask-1.jpg";
+import bg from "../media/backgrounds/texture1.jpg";
 
 import paypal from "../media/paypal/paypal.png";
 
@@ -11,6 +11,7 @@ import covid1 from "../media/covid/virus01.svg";
 import covid2 from "../media/covid/virus02.svg";
 import covid3 from "../media/covid/virus03.svg";
 import covid4 from "../media/covid/virus04.svg";
+import heart from "../media/covid/heart.png";
 
 function Presents() {
   const [lives, setLives] = useState(3);
@@ -74,9 +75,33 @@ function Presents() {
     if (lives <= 0) setGame(false);
   };
 
+  const Heart = ({ alt }) => {
+    return (
+      <img
+        alt={alt}
+        style={{ width: "50px", height: "50px", padding: "2px" }}
+        src={heart}
+      />
+    );
+  };
+
+  const Hearts = () => {
+    const Hearts = [];
+    for (let i = 0; i < lives; i++) {
+      Hearts.push(<Heart alt={`heart-${i}`} />);
+    }
+    return Hearts;
+  };
+
   return (
     <motion.div id="presents">
-      {game ? <div id="scoreboard">{`Lives: ${lives}`}</div> : ""}
+      {game ? (
+        <div id="scoreboard">
+          <Hearts />
+        </div>
+      ) : (
+        ""
+      )}
       <img
         ref={virus1}
         onMouseEnter={handleVirus}
@@ -133,9 +158,14 @@ function Presents() {
           <img src={paypal} alt="paypal" />
         </div>
       ) : (
-        <div id="gameover">
+        <motion.div
+          variants={fade}
+          initial="hidden"
+          animate="show"
+          id="gameover"
+        >
           <p>Game Over</p>
-        </div>
+        </motion.div>
       )}
     </motion.div>
   );
