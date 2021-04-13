@@ -23,8 +23,10 @@ const Quote = () => {
     <figure className="quote">
       <blockquote className="font-italic">
         <h5 className="mb-4 mt-2">{content.title}</h5>
-        {content.rows.map((row) => (
-          <p className="m-2">{row}</p>
+        {content.rows.map((row, index) => (
+          <p key={index} className="m-2">
+            {row}
+          </p>
         ))}
       </blockquote>
       <figcaption className="text-right">{content.authors}</figcaption>

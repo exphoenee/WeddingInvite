@@ -14,8 +14,8 @@ const OurStory = () => {
   return (
     <Container className="mt-5">
       <h3 className="mt-5">{content.title}</h3>
-      {content.details.map((detail) => (
-        <p>{detail}</p>
+      {content.details.map((detail, index) => (
+        <p key={index}>{detail}</p>
       ))}
     </Container>
   );
