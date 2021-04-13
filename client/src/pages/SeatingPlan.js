@@ -5,36 +5,13 @@ import Col from "react-bootstrap/Col";
 import { motion } from "framer-motion";
 
 import { useScroll } from "../components/useScroll";
+import LazyImage from "../components/LazyImage";
 import { pageAnimation, scrollReveal } from "../animations/animation";
-
-import comp01 from "../media/computers/comp01.jpg";
-import comp02 from "../media/computers/comp02.jpg";
-import comp03 from "../media/computers/comp03.jpg";
-import comp04 from "../media/computers/comp04.jpg";
-import comp05 from "../media/computers/comp05.jpg";
-import comp06 from "../media/computers/comp06.jpg";
-import comp07 from "../media/computers/comp07.jpg";
-import comp08 from "../media/computers/comp08.jpg";
-import comp09 from "../media/computers/comp09.jpg";
-import comp10 from "../media/computers/comp10.jpg";
-import comp11 from "../media/computers/comp11.jpg";
-import comp12 from "../media/computers/comp12.jpg";
-import comp13 from "../media/computers/comp13.jpg";
-import comp14 from "../media/computers/comp14.jpg";
+import comps from "../components/LoadComputerImages";
 
 import bg from "../media/backgrounds/old-1.jpg";
 
 function SeatingPlan() {
-  const comps = [
-    [comp01, comp02],
-    [comp03, comp04],
-    [comp05, comp06],
-    [comp07, comp08],
-    [comp09, comp10],
-    [comp11, comp12],
-    [comp13, comp14],
-  ];
-
   return (
     <motion.div
       variants={pageAnimation}
@@ -87,7 +64,11 @@ const CompCol = ({ row, rowIndex }) => {
             ref={element}
             className="image-frame mt-5 mb-5"
           >
-            <motion.img src={col} alt={`comp-${colIndex}-${rowIndex}`} />
+            <LazyImage
+              src={col.img}
+              alt={`comp-${colIndex}-${rowIndex}`}
+              placeholderSrc={col.placeHolder}
+            />
           </motion.div>
         </Col>
       ))}

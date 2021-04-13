@@ -15,17 +15,17 @@ const MainMenu = (setRouter) => {
           <Link className="nav-link" to="/">
             Meghívó
           </Link>
-          <Link className="nav-link" to="/about">
-            Történetünk
-          </Link>
           <Link className="nav-link" to="/informations">
             Információk
+          </Link>
+          <Link className="nav-link" to="/about">
+            Történetünk
           </Link>
           <Link className="nav-link" to="/seatingplan">
             Ültetési rend
           </Link>
           <Link className="nav-link" to="/live">
-            Live
+            Élő közvetítés
           </Link>
           <Link className="nav-link" to="/presents">
             Ajándékozás

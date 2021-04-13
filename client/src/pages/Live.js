@@ -5,23 +5,13 @@ import Iframe from "react-iframe";
 import { pageAnimation } from "../animations/animation";
 import Countdown from "../components/Countdown";
 import WeddingDate from "../components/WeddingDate";
-/*
-* Normal link
-https://www.youtube.com/watch?v=DDU-rZs-Ic4
-* Embed link
-https://www.youtube.com/embed/DDU-rZs-Ic4
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-*/
+import { LiveUrl } from "../components/LiveUrl";
 
 const Live = () => {
   //* Itt kell átyírni a test-et false-ra és a video ID-t
   //* Majd ide feltölteni:
   //* https://app.netlify.com/sites/adriandviktor/overview
-  const test = true;
-  const videoId = "DDU-rZs-Ic4";
-
-  const url = "https://www.youtube.com/embed/" + videoId + "/?autoplay=1";
+  const test = false;
 
   const started = () => {
     const WeddingDateTest = +new Date(`4/12/2021 16:00:00`);
@@ -62,7 +52,7 @@ const Live = () => {
         <Iframe
           width="100%"
           height="90%"
-          url={url}
+          url={LiveUrl}
           id="live"
           display="initial"
           position="relative"

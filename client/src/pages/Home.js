@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { pageAnimation } from "../animations/animation";
 
-import Header from "../components/Header";
+import Invite from "../components/Invite";
 
 //import styles
 import "../styles/app.scss";
@@ -17,7 +17,7 @@ function Home() {
       exit="exit"
       className="Home"
     >
-      <Header />
+      <Invite />
     </motion.div>
   );
 }

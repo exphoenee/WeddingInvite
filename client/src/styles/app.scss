@@ -26,6 +26,98 @@ h3 {
   margin-left: 30%;
 }
 
+#bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+  background-color: pink;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.myButton {
+  background: rgba(255, 192, 203, 0.616);
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px gray;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: 3s ease-in infinite blobbing;
+  animation: 3s ease-in infinite blobbing;
+  &:hover {
+    text-decoration: none;
+    box-shadow: 1px 1px 1px gray;
+    color: black;
+    background: rgba(255, 192, 203, 0.9);
+  }
+}
+
+@-webkit-keyframes blobbing {
+  0% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  40% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  45% {
+    transform: rotateZ(-0.5deg) scale(1.1);
+  }
+  47.5% {
+    transform: rotateZ(0.5deg) scale(1.1);
+  }
+  50% {
+    transform: rotateZ(-0.5deg) scale(1.1);
+  }
+  52.5% {
+    transform: rotateZ(0.5deg) scale(1.1);
+  }
+  55% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  100% {
+    transform: rotateZ(0deg) scale(1);
+  }
+}
+
+@keyframes blobbing {
+  0% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  40% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  45% {
+    transform: rotateZ(-0.5deg) scale(1.1);
+  }
+  47.5% {
+    transform: rotateZ(0.5deg) scale(1.1);
+  }
+  50% {
+    transform: rotateZ(-0.5deg) scale(1.1);
+  }
+  52.5% {
+    transform: rotateZ(0.5deg) scale(1.1);
+  }
+  55% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  100% {
+    transform: rotateZ(0deg) scale(1);
+  }
+}
+
 @import "./invite";
 @import "./about";
 @import "./carousel";
