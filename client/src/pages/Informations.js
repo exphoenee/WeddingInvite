@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import LazyImage from "../components/LazyImage";
-import { YoutubeUrl } from "../components/LiveUrl";
+import { YoutubeUrl } from "../settings";
 
 import { pageAnimation } from "../animations/animation";
 
@@ -42,16 +42,16 @@ function Informations() {
       <Container>
         <h2>Fontos tudnivalók</h2>
         <p>
-          A jelenlegi járványhelyzetre való tekintettel csak kis számú vendéget
-          fogadhatnak a hivatalok és a Boldogság Háza is. Egészen pontosan 10
-          ember lehet velünk a ceremónián, és ebbe már a fotós is bele tartozik.
-          További 10 ember nézheti az épületben egy kivetítőn keresztül ugyanazt
-          az élő közvetítést, mint saját számítógépein, azok akik nem lehetnek
-          jelen.
+          A jelenlegi járványhelyzetre való tekintettel csak kis létszámú
+          vendéget fogadhatnak a hivatalok és a Boldogság Háza is. Egészen
+          pontosan 10 ember lehet velünk a ceremónián, és ebbe már a fotós is
+          bele tartozik. További 10 ember nézheti az épületben egy kivetítőn
+          keresztül ugyanazt az élő közvetítést, mint saját számítógépein azok,
+          akik nem lehetnek jelen.
         </p>
         <p>
           Az ifjú pár tisztelettel kéri, hogy aki egy kicsit is rosszul érzi
-          magát, az maradjon otthon, és kövesse az élő közvetítést!
+          magát, az maradjon otthon, és úgy kövesse az élő közvetítést!
         </p>
         <Row className="justify-content-center mb-5 mt-5">
           <img style={{ width: "50px" }} src={covid5} alt="covid5" />
@@ -61,8 +61,8 @@ function Informations() {
           <img style={{ width: "50px" }} src={covid2} alt="covid2" />
         </Row>
         <p>
-          Az egész ceremónia 3 kamerával lesz streamelve youtube-on kereszült.
-          Kétféle lehetőség is van, hogy kövessétek az éő adást: a honalap "Élő
+          Az egész ceremónia 3 kamerával lesz streamelve youtube-on keresztül.
+          Kétféle lehetőség is van, hogy kövessétek az élő adást: a honalap "Élő
           közvetítés" aloldalán vagy közvetlenül a Youtube-on. Az élő közvetítés
           linkje 24 órával a ceremónia megkezdése előtt lesz számunkra is
           ismert, amelyet itt is közzé fogunk tenni. Lásd a lenti kép alján a
@@ -119,16 +119,15 @@ function Informations() {
           <Col>
             <p>
               Vendégek és az ifjú pár érkezése a helyszínre: 15 perccel kezdés
-              előtt. A járvány miatt előbb senkit nem tudunk beengedni az
-              épületbe, csak akkor, ha az előző esküvő kijött! Kérem, legyenek
-              kedvesek vendégeiknek is ezt elmondani! Az épületbe belépve
-              kézfertőtlenítésre kerül sor. Az épületbe csak szájmaszkban lehet
-              belépni, amit a terembe felérve, aki szeretné leveheti.
+              előtt. A járvány miatt előbb senkit nem tudnak beengedni az
+              épületbe, csak akkor, ha az előző esküvő résztvevői kijöttek! Az
+              épületbe belépve kézfertőtlenítésre kerül sor. Az épületbe csak
+              szájmaszkban lehet belépni, amit a terembe felérve, aki szeretné
+              leveheti.
             </p>
             <p>
               Behajtási engedélyt lehet vásárolni a 48-as téri Shell
-              benzinkúton, és a Biokomnál, de itt előzetes időpontkérés
-              szükséges.
+              benzinkúton.
             </p>
           </Col>
           <Col>

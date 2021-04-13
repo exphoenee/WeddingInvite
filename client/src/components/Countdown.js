@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import WeddingDate from "./WeddingDate";
+import { WeddingDate } from "../settings";
 
 const Countdown = () => {
   useEffect(() => {

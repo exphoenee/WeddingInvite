@@ -104,7 +104,7 @@
   }
 
   #details-btn {
-    background-color: #ffddddaa;
+    background-color: rgba(182, 144, 144, 0.8);
     text-decoration: none;
     color: #fff;
     text-shadow: none;
@@ -113,10 +113,36 @@
     padding: 5px;
     width: 120px;
     margin: 20px auto;
+    box-shadow: 1px 2px 5px black;
 
     &:hover {
+      box-shadow: 1px 1px 2px black;
       background-color: #ffddddff;
       color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #bg2,
+  #bg2 {
+    display: none;
+  }
+  .invite {
+    overflow-y: auto;
+    width: 100%;
+    position: inherit;
+    transform: translate(0%, 0%);
+
+    width: 90%;
+    margin: 50px auto 50px auto;
+    position: inherit;
+    transform: translate(0%, 0%);
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
     }
   }
 }

@@ -132,7 +132,7 @@ function Presents() {
       />
       <div>
         <h2>Ha szeretnél ajándékozni, itt megteheted...</h2>
-        <p>...ha elég ügyes vagy kitartó vagy!</p>
+        <p>...ha elég ügyes és kitartó vagy!</p>
         <img id="bg" src={bg} alt="bakcground" />
       </div>
       {showModal ? (

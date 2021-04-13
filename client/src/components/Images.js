@@ -14,10 +14,6 @@ import img016 from "../media/carousel/carousel-016.webp";
 import img017 from "../media/carousel/carousel-017.webp";
 import img018 from "../media/carousel/carousel-018.webp";
 import img019 from "../media/carousel/carousel-019.webp";
-import img023 from "../media/carousel/carousel-023.webp";
-import img024 from "../media/carousel/carousel-024.webp";
-
-/* Folwers */
 import img006 from "../media/carousel/carousel-006.webp";
 import img007 from "../media/carousel/carousel-007.webp";
 import img008 from "../media/carousel/carousel-008.webp";
@@ -27,30 +23,25 @@ import img021 from "../media/carousel/carousel-021.webp";
 import img022 from "../media/carousel/carousel-022.webp";
 
 export const OurImages = [
-  img017,
+  img001,
   img002,
   img003,
   img004,
   img005,
+  img006,
+  img007,
+  img008,
   img009,
   img010,
-  img001,
+  img011,
   img012,
   img013,
   img014,
   img015,
   img016,
+  img017,
   img018,
   img019,
-  img023,
-  img024,
-];
-
-export const FlowerImages = [
-  img006,
-  img007,
-  img008,
-  img011,
   img020,
   img021,
   img022,

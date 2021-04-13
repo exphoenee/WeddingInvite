@@ -26,10 +26,10 @@ function SeatingPlan() {
         <h2>Ültetési rend:</h2>
         <p>
           A különleges helyzetre való tekintettel, speciális ültetési rendet
-          dolgoztunk ki nektek, hogy mindenki biztosnágban lehessen!
+          dolgoztunk ki nektek, hogy mindenki biztonságban lehessen!
         </p>
         <p>
-          Foglaljatok helyet a számítőgépeitek, tabletjeitek vagy telefonjaitok
+          Foglaljatok helyet a számítógépeitek, tabletjeitek vagy telefonjaitok
           előtt!
         </p>
         <CompRow comps={comps} />

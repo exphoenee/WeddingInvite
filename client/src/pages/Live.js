@@ -4,15 +4,10 @@ import Iframe from "react-iframe";
 
 import { pageAnimation } from "../animations/animation";
 import Countdown from "../components/Countdown";
-import WeddingDate from "../components/WeddingDate";
-import { LiveUrl } from "../components/LiveUrl";
+import { WeddingDate } from "../settings";
+import { LiveUrl, test } from "../settings";
 
 const Live = () => {
-  //* Itt kell átyírni a test-et false-ra és a video ID-t
-  //* Majd ide feltölteni:
-  //* https://app.netlify.com/sites/adriandviktor/overview
-  const test = false;
-
   const started = () => {
     const WeddingDateTest = +new Date(`4/12/2021 16:00:00`);
 
