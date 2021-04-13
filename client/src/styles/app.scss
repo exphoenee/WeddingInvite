@@ -45,6 +45,23 @@ h3 {
   -o-user-drag: none;
   user-drag: none;
 }
+#bg2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 
 .myButton {
   background: rgba(255, 192, 203, 0.616);

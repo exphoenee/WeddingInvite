@@ -5,21 +5,24 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import LazyImage from "../components/LazyImage";
 import { YoutubeUrl } from "../components/LiveUrl";
 
 import { pageAnimation } from "../animations/animation";
 
-import bg from "../media/backgrounds/paper.jpg";
+import bg from "../media/backgrounds/paper.webp";
+import bgtmb from "../media/backgrounds/thumbs/paper_tmb.webp";
 
 import covid1 from "../media/covid/01.svg";
 import covid2 from "../media/covid/02.svg";
 import covid3 from "../media/covid/03.svg";
-import covid4 from "../media/covid/04.svg";
 import covid5 from "../media/covid/05.svg";
 import covid6 from "../media/covid/06.svg";
 
-import niceplace from "../media/decor/img02.jpg";
-import flower from "../media/decor/img01.jpg";
+import niceplace from "../media/decor/img02.webp";
+import niceplacetmb from "../media/decor/thumbs/img02_tmb.webp";
+import flower from "../media/decor/img01.webp";
+import flowertmb from "../media/decor/thumbs/img01_tmb.webp";
 
 import youtubeIcon from "../media/icons/youtube.png";
 import weddingIcon from "../media/icons/wedding.png";
@@ -66,8 +69,9 @@ function Informations() {
           két gombot.
         </p>
         <div className="d-flex flex-column position-relative">
-          <img
+          <LazyImage
             src={niceplace}
+            placeholderSrc={niceplacetmb}
             style={{
               display: "block",
               margin: "50px auto 50px auto",
@@ -128,8 +132,9 @@ function Informations() {
             </p>
           </Col>
           <Col>
-            <img
+            <LazyImage
               src={flower}
+              placeholderSrc={flowertmb}
               style={{
                 display: "block",
                 margin: "0 auto 0 auto",

@@ -1,20 +1,28 @@
-.header {
-  height: 100vh;
+/*
   background: url("../media/backgrounds/img02.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 1px 1px 1px rgba(50, 20, 5, 1), -1px -1px 1px rgba(50, 20, 5, 1),
-    1px 3px 3px rgba(50, 20, 5, 0.8), 2px 4px 15px rgba(0, 0, 0, 0.6),
-    -1px -3px 3px rgba(50, 20, 5, 0.8);
+*/
+
+.invite {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(245, 220, 224);
 
   .title-text {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-shadow: 1px 1px 1px rgba(50, 20, 5, 1),
+      -1px -1px 1px rgba(50, 20, 5, 1), 1px 3px 3px rgba(50, 20, 5, 0.8),
+      2px 4px 15px rgba(0, 0, 0, 0.6), -1px -3px 3px rgba(50, 20, 5, 0.8);
+    color: white;
     transition: all 0.3s linear;
     background: linear-gradient(45deg, #edc0bf33 50%, #c4caef33 58%);
     -webkit-backdrop-filter: blur(3px);
@@ -23,7 +31,6 @@
     padding: 3rem;
     border-radius: 2rem;
     box-shadow: 5px 5px 5px rgba(black, 0.3);
-    position: relative;
     overflow: hidden;
   }
 
