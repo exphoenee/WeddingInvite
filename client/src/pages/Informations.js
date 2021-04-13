@@ -40,14 +40,14 @@ function Informations() {
         <h2>Fontos tudnivalók</h2>
         <p>
           A jelenlegi járványhelyzetre való tekintettel csak kis számú vendéget
-          fogadhtank a hivatalok és a Boldogság Háza is. Egészen pontosan 10
+          fogadhatnak a hivatalok és a Boldogság Háza is. Egészen pontosan 10
           ember lehet velünk a ceremónián, és ebbe már a fotós is bele tartozik.
           További 10 ember nézheti az épületben egy kivetítőn keresztül ugyanazt
           az élő közvetítést, mint saját számítógépein, azok akik nem lehetnek
           jelen.
         </p>
         <p>
-          Az ifjú pár tisztelettel kéri, hogy aki egy kicsit is rosszúl érzi
+          Az ifjú pár tisztelettel kéri, hogy aki egy kicsit is rosszul érzi
           magát, az maradjon otthon, és kövesse az élő közvetítést!
         </p>
         <Row className="justify-content-center mb-5 mt-5">
@@ -58,10 +58,12 @@ function Informations() {
           <img style={{ width: "50px" }} src={covid2} alt="covid2" />
         </Row>
         <p>
-          Az egész ceremónia 3 kamerával lesz streamelve youtube-on. Az élő
-          közvetítés linkje 24 órával a ceremónia megkezdése előtt lesz
-          számunkra is ismert, amelyet itt is közzé fogunk tenni. Lásd a lenti
-          kép alján a két gombot.
+          Az egész ceremónia 3 kamerával lesz streamelve youtube-on kereszült.
+          Kétféle lehetőség is van, hogy kövessétek az éő adást: a honalap "Élő
+          közvetítés" aloldalán vagy közvetlenül a Youtube-on. Az élő közvetítés
+          linkje 24 órával a ceremónia megkezdése előtt lesz számunkra is
+          ismert, amelyet itt is közzé fogunk tenni. Lásd a lenti kép alján a
+          két gombot.
         </p>
         <div className="d-flex flex-column position-relative">
           <img
@@ -121,7 +123,7 @@ function Informations() {
             </p>
             <p>
               Behajtási engedélyt lehet vásárolni a 48-as téri Shell
-              benzinkóton, és a Biokomnál, de itt előzetes időpontkérés
+              benzinkúton, és a Biokomnál, de itt előzetes időpontkérés
               szükséges.
             </p>
           </Col>
