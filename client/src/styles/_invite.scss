@@ -123,26 +123,46 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .invite {
+    .title-text {
+      margin-top: 36px;
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px), (max-height: 550px) {
   #bg2,
   #bg2 {
     display: none;
   }
   .invite {
-    overflow-y: auto;
+    height: auto;
     width: 100%;
     position: inherit;
     transform: translate(0%, 0%);
 
-    width: 90%;
-    margin: 50px auto 50px auto;
+    width: 100%;
+    margin: 0px auto;
     position: inherit;
-    transform: translate(0%, 0%);
-    h1 {
-      font-size: 3rem;
-    }
-    h2 {
-      font-size: 2rem;
+    padding: 50px;
+    .title-text {
+      width: 100%;
+      position: inherit;
+      margin: 0;
+      transform: translate(0%, 0%);
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
     }
   }
 }

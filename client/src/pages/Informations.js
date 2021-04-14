@@ -45,8 +45,7 @@ function Informations() {
           A jelenlegi járványhelyzetre való tekintettel csak kis létszámú
           vendéget fogadhatnak a hivatalok és a Boldogság Háza is. Egészen
           pontosan 10 ember lehet velünk a ceremónián, és ebbe már a fotós is
-          bele tartozik. További 10 ember nézheti az épületben egy kivetítőn
-          keresztül ugyanazt az élő közvetítést, mint saját számítógépein azok,
+          bele tartozik. Ezért az élő közvetítést a saját számítógépein azok,
           akik nem lehetnek jelen.
         </p>
         <p>
@@ -70,29 +69,13 @@ function Informations() {
         </p>
         <div className="d-flex flex-column position-relative">
           <LazyImage
+            id="weddingplace"
             src={niceplace}
             placeholderSrc={niceplacetmb}
-            style={{
-              display: "block",
-              margin: "50px auto 50px auto",
-              width: "70%",
-              borderRadius: "10px",
-              boxShadow: "1px 2px 5px gray",
-            }}
             alt="niceplace"
           />
           <Row
-            style={{
-              width: "70%",
-              margin: "0 auto 0 auto",
-              padding: "20px 10px",
-              background: "#00000022",
-              position: "absolute",
-              bottom: "50px",
-              borderRadius: "10px",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
+            id="live-buttons"
             className="justify-content-center align-items-center"
           >
             <Link className="myButton" to="/live">
@@ -116,7 +99,7 @@ function Informations() {
         </div>
         <h2>Részletek</h2>
         <Row>
-          <Col>
+          <Col md={6}>
             <p>
               Vendégek és az ifjú pár érkezése a helyszínre: 15 perccel kezdés
               előtt. A járvány miatt előbb senkit nem tudnak beengedni az
@@ -130,7 +113,7 @@ function Informations() {
               benzinkúton.
             </p>
           </Col>
-          <Col>
+          <Col md={6}>
             <LazyImage
               src={flower}
               placeholderSrc={flowertmb}

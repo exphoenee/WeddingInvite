@@ -1,5 +1,11 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile,
+} from "react-device-detect";
 
 import { pageAnimation, fade } from "../animations/animation";
 
@@ -95,78 +101,83 @@ function Presents() {
 
   return (
     <motion.div id="presents">
-      {game ? (
-        <div id="scoreboard">
-          <Hearts />
+      <BrowserView>
+        {game ? (
+          <div id="scoreboard">
+            <Hearts />
+          </div>
+        ) : (
+          ""
+        )}
+        <img
+          ref={virus1}
+          onMouseEnter={handleVirus}
+          className="covid"
+          src={covid1}
+          alt="covid1"
+        />
+        <img
+          ref={virus2}
+          onMouseEnter={handleVirus}
+          className="covid"
+          src={covid2}
+          alt="covid2"
+        />
+        <img
+          ref={virus3}
+          onMouseEnter={handleVirus}
+          className="covid"
+          src={covid3}
+          alt="covid3"
+        />
+        <img
+          ref={virus4}
+          onMouseEnter={handleVirus}
+          className="covid"
+          src={covid4}
+          alt="covid4"
+        />
+        <div>
+          <h2>Ha szeretnél ajándékozni, itt megteheted...</h2>
+          <p>...ha elég ügyes és kitartó vagy!</p>
+          <img id="bg" src={bg} alt="bakcground" />
         </div>
-      ) : (
-        ""
-      )}
-      <img
-        ref={virus1}
-        onMouseEnter={handleVirus}
-        className="covid"
-        src={covid1}
-        alt="covid1"
-      />
-      <img
-        ref={virus2}
-        onMouseEnter={handleVirus}
-        className="covid"
-        src={covid2}
-        alt="covid2"
-      />
-      <img
-        ref={virus3}
-        onMouseEnter={handleVirus}
-        className="covid"
-        src={covid3}
-        alt="covid3"
-      />
-      <img
-        ref={virus4}
-        onMouseEnter={handleVirus}
-        className="covid"
-        src={covid4}
-        alt="covid4"
-      />
-      <div>
-        <h2>Ha szeretnél ajándékozni, itt megteheted...</h2>
-        <p>...ha elég ügyes és kitartó vagy!</p>
-        <img id="bg" src={bg} alt="bakcground" />
-      </div>
-      {showModal ? (
-        <div id="messageModal">
-          <h2>
-            Köszönjük, hogy ilyen kitartó voltál, de semmit sem fogadunk el!
-          </h2>
-        </div>
-      ) : (
-        ""
-      )}
-      {lives > 0 ? (
-        <div
-          variants={pageAnimation}
-          initial="hidden"
-          animate="show"
-          exit="exit"
-          ref={flyingButton}
-          onMouseEnter={handleMouseEnter}
-          onClick={hanldeClick}
-          className="flying-button"
-        >
-          <img src={paypal} alt="paypal" />
-        </div>
-      ) : (
-        <motion.div
-          variants={fade}
-          initial="hidden"
-          animate="show"
-          id="gameover"
-        >
-          <p>Game Over</p>
-        </motion.div>
-      )}
+        {showModal ? (
+          <div id="messageModal">
+            <h2>
+              Köszönjük, hogy ilyen kitartó voltál, de semmit sem fogadunk el!
+            </h2>
+          </div>
+        ) : (
+          ""
+        )}
+        {lives > 0 ? (
+          <div
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            ref={flyingButton}
+            onMouseEnter={handleMouseEnter}
+            onClick={hanldeClick}
+            className="flying-button"
+          >
+            <img src={paypal} alt="paypal" />
+          </div>
+        ) : (
+          <motion.div
+            variants={fade}
+            initial="hidden"
+            animate="show"
+            id="gameover"
+          >
+            <p>Game Over</p>
+          </motion.div>
+        )}
+      </BrowserView>
+      <MobileView>
+        <h2>Ez a funkció, csak asztali számítógépen működik!</h2>
+      </MobileView>
     </motion.div>
   );
 }

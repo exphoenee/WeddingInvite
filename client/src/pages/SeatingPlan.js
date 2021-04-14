@@ -56,7 +56,7 @@ const CompCol = ({ row, rowIndex }) => {
   return (
     <>
       {row.map((col, colIndex) => (
-        <Col key={colIndex}>
+        <Col md={6} key={colIndex}>
           <motion.div
             variants={scrollReveal}
             animate={controls}

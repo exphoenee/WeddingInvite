@@ -1,0 +1,63 @@
+.informations {
+  #weddingplace {
+    display: block;
+    margin: 50px auto 50px auto;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px gray;
+  }
+  #live-buttons {
+    width: 70%;
+    margin: 0 auto 0 auto;
+    padding: 20px 10px;
+    background: #00000022;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px), (max-height: 550px) {
+  .informations {
+    #weddingplace {
+      display: block;
+      margin: 50px auto 50px auto;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 1px 2px 5px gray;
+    }
+
+    #live-buttons {
+      width: 100%;
+      margin: 0 auto 0 auto;
+      margin-bottom: 50px;
+      padding: 20px 10px;
+      background: #00000022;
+      position: inherit;
+      bottom: 0px;
+      border-radius: 10px;
+      left: 0%;
+      transform: translateX(0%);
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .informations {
+    #live-buttons {
+      width: auto;
+      flex-direction: column;
+      margin: 0 auto 0 auto;
+      margin-bottom: 50px;
+      padding: 30px 30px;
+      background: #00000022;
+      position: inherit;
+      bottom: 0px;
+      border-radius: 10px;
+      left: 0%;
+      transform: translateX(0%);
+    }
+  }
+}
