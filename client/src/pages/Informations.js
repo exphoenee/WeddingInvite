@@ -45,8 +45,7 @@ function Informations() {
           A jelenlegi járványhelyzetre való tekintettel csak kis létszámú
           vendéget fogadhatnak a hivatalok és a Boldogság Háza is. Egészen
           pontosan 10 ember lehet velünk a ceremónián, és ebbe már a fotós is
-          bele tartozik. Ezért az élő közvetítést a saját számítógépein azok,
-          akik nem lehetnek jelen.
+          bele tartozik. Ezért az élő közvetítést a saját számítógépein nézhetik azok, akik nem lehetnek jelen.
         </p>
         <p>
           Az ifjú pár tisztelettel kéri, hogy aki egy kicsit is rosszul érzi
