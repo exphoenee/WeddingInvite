@@ -7,10 +7,10 @@ https://www.youtube.com/embed/DDU-rZs-Ic4
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 */
 
-const videoId = "uCfAAdnUaXU";
+const videoId = "lBJbcLtbTuU";
 
 export const LiveUrl =
-  "https://www.youtube.com/embed/" + videoId + "/?autoplay=1";
+  "https://www.youtube.com/embed/" + videoId + "/?autoplay=1&rel=0";
 
 export const YoutubeUrl =
   "https://www.youtube.com/watch?v=" + videoId + "&autoplay=1";
