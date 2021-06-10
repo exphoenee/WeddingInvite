@@ -76,4 +76,4 @@ const CompCol = ({ row, rowIndex }) => {
   );
 };
 
-export default SeatingPlan;
+export default Gallery;
