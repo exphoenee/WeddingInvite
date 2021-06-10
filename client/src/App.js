@@ -8,6 +8,7 @@ import About from "./pages/About";
 import SeatingPlan from "./pages/SeatingPlan";
 import Informations from "./pages/Informations";
 import Live from "./pages/Live";
+import Gallery from "./pages/Gallery";
 import Presents from "./pages/Presents";
 
 //import styles
@@ -25,6 +26,7 @@ function App() {
             <Route path="/informations" component={Informations} />
             <Route path="/seatingplan" component={SeatingPlan} />
             <Route path="/live" component={Live} />
+            <Route path="/gallery" component={Gallery} />
             <Route path="/presents" component={Presents} />
           </Switch>
         </AnimatePresence>

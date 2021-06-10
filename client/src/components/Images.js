@@ -22,6 +22,20 @@ import img020 from "../media/carousel/carousel-020.webp";
 import img021 from "../media/carousel/carousel-021.webp";
 import img022 from "../media/carousel/carousel-022.webp";
 
+import wlimg001 from "../media/weddingphotos/landscape/_FLK2624.jpg";
+import wlimg002 from "../media/weddingphotos/landscape/_FLK2661.jpg";
+import wlimg003 from "../media/weddingphotos/landscape/_FLK2682.jpg";
+import wlimg004 from "../media/weddingphotos/landscape/_FLK2707.jpg";
+import wlimg005 from "../media/weddingphotos/landscape/_FLK2720.jpg";
+import wlimg006 from "../media/weddingphotos/landscape/_FLK2784.jpg";
+
+import wpimg001 from "../media/weddingphotos/portrait/_FLK2809.jpg";
+import wpimg002 from "../media/weddingphotos/portrait/_FLK2816.jpg";
+import wpimg003 from "../media/weddingphotos/portrait/_FLK2855.jpg";
+import wpimg004 from "../media/weddingphotos/portrait/_FLK2886.jpg";
+import wpimg005 from "../media/weddingphotos/portrait/_FLK2920.jpg";
+import wpimg006 from "../media/weddingphotos/portrait/_FLK3169.jpg";
+
 export const OurImages = [
   img001,
   img002,
@@ -45,4 +59,22 @@ export const OurImages = [
   img020,
   img021,
   img022,
+];
+
+export const LandscapeWeddingImages = [
+  wlimg001,
+  wlimg002,
+  wlimg003,
+  wlimg004,
+  wlimg005,
+  wlimg006,
+];
+
+export const PortraitWeddingImages = [
+  wpimg001,
+  wpimg002,
+  wpimg003,
+  wpimg004,
+  wpimg005,
+  wpimg006,
 ];

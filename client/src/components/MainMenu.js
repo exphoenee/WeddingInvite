@@ -25,7 +25,10 @@ const MainMenu = (setRouter) => {
             Ültetési rend
           </Link>
           <Link className="nav-link" to="/live">
-            Élő közvetítés
+            Videó
+          </Link>
+          <Link className="nav-link" to="/gallery">
+            Fényképek
           </Link>
           <Link className="nav-link" to="/presents">
             Ajándékozás

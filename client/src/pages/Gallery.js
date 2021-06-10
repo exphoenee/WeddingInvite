@@ -3,77 +3,36 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { motion } from "framer-motion";
+import {
+  LandscapeWeddingImages,
+  PortraitWeddingImages,
+} from "../components/Images";
 
-import { useScroll } from "../components/useScroll";
-import LazyImage from "../components/LazyImage";
-import { pageAnimation, scrollReveal } from "../animations/animation";
-import comps from "../components/LoadComputerImages";
-
-import bg from "../media/backgrounds/old-1.jpg";
+import { pageAnimation } from "../animations/animation";
+import GalleryCarousel from "../components/GalleryCarousel";
 
 function Gallery() {
   return (
     <motion.div
+      className="About mt-5"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
-      className="seating-plan"
     >
-      <img id="bg" src={bg} alt="bg" />
-      <div style={{ height: "100px" }}></div>
+      <div style={{ height: "56px" }}></div>
       <Container className="mt-5">
-        <h2>Ültetési rend:</h2>
-        <p>
-          A különleges helyzetre való tekintettel, speciális ültetési rendet
-          dolgoztunk ki nektek, hogy mindenki biztonságban lehessen!
-        </p>
-        <p>
-          Foglaljatok helyet a számítógépeitek, tabletjeitek vagy telefonjaitok
-          előtt!
-        </p>
-        <CompRow comps={comps} />
+        <h2>Fényképgaléria</h2>
+        <Row className="landscape">
+          <GalleryCarousel Images={LandscapeWeddingImages} />
+        </Row>
+        <Row className="portrait">
+          <GalleryCarousel Images={PortraitWeddingImages} />
+        </Row>
       </Container>
+      <div style={{ height: "300px" }}></div>
     </motion.div>
   );
 }
-
-const CompRow = ({ comps }) => {
-  return (
-    <>
-      {comps.map((row, rowIndex) => (
-        <Row>
-          <CompCol row={row} key={rowIndex} rowIndex={rowIndex}></CompCol>
-        </Row>
-      ))}
-    </>
-  );
-};
-
-const CompCol = ({ row, rowIndex }) => {
-  const [element, controls] = useScroll();
-
-  return (
-    <>
-      {row.map((col, colIndex) => (
-        <Col md={6} key={colIndex}>
-          <motion.div
-            variants={scrollReveal}
-            animate={controls}
-            initial="hidden"
-            ref={element}
-            className="image-frame mt-5 mb-5"
-          >
-            <LazyImage
-              src={col.img}
-              alt={`comp-${colIndex}-${rowIndex}`}
-              placeholderSrc={col.placeHolder}
-            />
-          </motion.div>
-        </Col>
-      ))}
-    </>
-  );
-};
 
 export default Gallery;
